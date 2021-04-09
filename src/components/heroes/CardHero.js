@@ -21,7 +21,7 @@ export let CardHero = ({id, superhero, publisher, alter_ego, first_appearance}) 
                     <h4>{superhero}</h4>
 
                 </div>  
-                <img className="imagen" src={`assets/heroes/${id}.jpg`} alt="..." />
+                <img className="imagen" src={`./assets/heroes/${id}.jpg`} alt="..." />
                 
                 <div className="relati">
                     <div className="information-card">
