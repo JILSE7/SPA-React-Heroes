@@ -2,12 +2,13 @@ import React from 'react'
 
 import './cards.css'
 
-
+// import batman from '../../assets/heroes/dc-batman.jpg'
+const img = require.context('../../assets/heroes');
 
 export let CardHero = ({id, superhero, publisher, alter_ego, first_appearance}) => {
     publisher = publisher.split(" ").splice(0,1);
-
-
+  
+    console.log(id);
     return (
 
  
@@ -21,7 +22,7 @@ export let CardHero = ({id, superhero, publisher, alter_ego, first_appearance}) 
                     <h4>{superhero}</h4>
 
                 </div>  
-                <img className="imagen" src={`/assets/heroes/${id}.jpg`} alt="..." />
+                <img className="imagen" src={img(`./${id}.jpg`).default} alt={id} />
                 
                 <div className="relati">
                     <div className="information-card">
